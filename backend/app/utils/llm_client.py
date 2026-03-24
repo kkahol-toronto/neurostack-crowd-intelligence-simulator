@@ -1,14 +1,35 @@
 """
 LLM client wrapper
-Unified OpenAI-compatible API calls
+Unified OpenAI-compatible API calls (OpenAI + Azure OpenAI)
 """
 
 import json
 import re
 from typing import Optional, Dict, Any, List
-from openai import OpenAI
+from urllib.parse import urlparse
+
+from openai import AzureOpenAI, OpenAI
 
 from ..config import Config
+
+
+def _azure_resource_endpoint(base_url: str) -> str:
+    """Turn any Azure OpenAI URL into https://resource.openai.azure.com (no path)."""
+    if not base_url:
+        return ''
+    parsed = urlparse(base_url.strip())
+    if not parsed.netloc:
+        return base_url.rstrip('/')
+    return f"{parsed.scheme}://{parsed.netloc}".rstrip('/')
+
+
+def _should_use_azure() -> bool:
+    if Config.LLM_USE_AZURE:
+        return True
+    if Config.AZURE_OPENAI_ENDPOINT:
+        return True
+    bu = (Config.LLM_BASE_URL or '').lower()
+    return '.openai.azure.com' in bu
 
 
 class LLMClient:
@@ -27,10 +48,23 @@ class LLMClient:
         if not self.api_key:
             raise ValueError("LLM_API_KEY is not configured")
 
-        self.client = OpenAI(
-            api_key=self.api_key,
-            base_url=self.base_url
-        )
+        if _should_use_azure():
+            endpoint = Config.AZURE_OPENAI_ENDPOINT or _azure_resource_endpoint(self.base_url or '')
+            if not endpoint:
+                raise ValueError(
+                    "Azure OpenAI: set AZURE_OPENAI_ENDPOINT (e.g. https://YOUR_RESOURCE.openai.azure.com) "
+                    "or LLM_BASE_URL to a URL containing .openai.azure.com"
+                )
+            self.client = AzureOpenAI(
+                api_key=self.api_key,
+                api_version=Config.AZURE_OPENAI_API_VERSION,
+                azure_endpoint=endpoint,
+            )
+        else:
+            self.client = OpenAI(
+                api_key=self.api_key,
+                base_url=self.base_url,
+            )
 
     def chat(
         self,

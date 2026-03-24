@@ -34,6 +34,17 @@ service.interceptors.response.use(
   error => {
     console.error('Response error:', error)
     
+    const data = error.response?.data
+    const serverMsg =
+      (typeof data?.error === 'string' && data.error) ||
+      (typeof data?.message === 'string' && data.message) ||
+      null
+    if (serverMsg) {
+      const wrapped = new Error(serverMsg)
+      wrapped.response = error.response
+      return Promise.reject(wrapped)
+    }
+    
     // Timeout
     if (error.code === 'ECONNABORTED' && error.message.includes('timeout')) {
       console.error('Request timeout')

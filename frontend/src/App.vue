@@ -14,30 +14,38 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  min-height: 100%;
+  background: #050508;
+}
+
 #app {
   font-family: 'JetBrains Mono', 'Space Grotesk', 'Noto Sans SC', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #000000;
-  background-color: #ffffff;
+  color: rgba(240, 245, 255, 0.92);
+  background-color: #050508;
+  min-height: 100vh;
 }
 
-/* Scrollbars */
+/* Scrollbars — dark shell */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #12121a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #000000;
+  background: rgba(0, 212, 255, 0.35);
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #333333;
+  background: rgba(255, 107, 53, 0.45);
 }
 
 /* Buttons inherit font */

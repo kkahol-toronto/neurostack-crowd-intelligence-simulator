@@ -1,8 +1,11 @@
 services:
   neurostack_crowd_intelligence_simulator:
-    image: ghcr.io/kkahol-toronto/neurostack-crowd-intelligence-simulator:latest
-    # Mirror URL — replace if pulls are slow
-    # image: ghcr.nju.edu.cn/kkahol-toronto/neurostack-crowd-intelligence-simulator:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: neurostack-crowd-intelligence-simulator:local
+    # Or pull a pre-built image instead of building:
+    # image: ghcr.io/kkahol-toronto/neurostack-crowd-intelligence-simulator:latest
     container_name: neurostack_crowd_intelligence_simulator
     env_file:
       - .env

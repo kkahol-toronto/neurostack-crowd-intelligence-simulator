@@ -31,6 +31,10 @@ class Config:
     LLM_API_KEY = os.environ.get('LLM_API_KEY')
     LLM_BASE_URL = os.environ.get('LLM_BASE_URL', 'https://api.openai.com/v1')
     LLM_MODEL_NAME = os.environ.get('LLM_MODEL_NAME', 'gpt-4o-mini')
+    # Azure OpenAI: set LLM_USE_AZURE=true or AZURE_OPENAI_ENDPOINT, or use a *.openai.azure.com LLM_BASE_URL
+    LLM_USE_AZURE = os.environ.get('LLM_USE_AZURE', '').lower() in ('1', 'true', 'yes')
+    AZURE_OPENAI_ENDPOINT = os.environ.get('AZURE_OPENAI_ENDPOINT', '').strip().rstrip('/')
+    AZURE_OPENAI_API_VERSION = os.environ.get('AZURE_OPENAI_API_VERSION', '2024-08-01-preview')
     
     # Zep configuration
     ZEP_API_KEY = os.environ.get('ZEP_API_KEY')
