@@ -8,11 +8,11 @@
 
 <a href="https://www.shanda.com/" target="_blank"><img src="./static/image/shanda_logo.png" alt="Shanda Group (partner)" height="40"/></a>
 
-[![GitHub Stars](https://img.shields.io/github/stars/neurostack/neurostack-crowd-intelligence-simulator?style=flat-square&color=DAA520)](https://github.com/neurostack/neurostack-crowd-intelligence-simulator/stargazers)
-[![GitHub Watchers](https://img.shields.io/github/watchers/neurostack/neurostack-crowd-intelligence-simulator?style=flat-square)](https://github.com/neurostack/neurostack-crowd-intelligence-simulator/watchers)
-[![GitHub Forks](https://img.shields.io/github/forks/neurostack/neurostack-crowd-intelligence-simulator?style=flat-square)](https://github.com/neurostack/neurostack-crowd-intelligence-simulator/network)
+[![GitHub Stars](https://img.shields.io/github/stars/kkahol-toronto/neurostack-crowd-intelligence-simulator?style=flat-square&color=DAA520)](https://github.com/kkahol-toronto/neurostack-crowd-intelligence-simulator/stargazers)
+[![GitHub Watchers](https://img.shields.io/github/watchers/kkahol-toronto/neurostack-crowd-intelligence-simulator?style=flat-square)](https://github.com/kkahol-toronto/neurostack-crowd-intelligence-simulator/watchers)
+[![GitHub Forks](https://img.shields.io/github/forks/kkahol-toronto/neurostack-crowd-intelligence-simulator?style=flat-square)](https://github.com/kkahol-toronto/neurostack-crowd-intelligence-simulator/network)
 [![Docker](https://img.shields.io/badge/Docker-Build-2496ED?style=flat-square&logo=docker&logoColor=white)](https://hub.docker.com/)
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/neurostack/neurostack-crowd-intelligence-simulator)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/kkahol-toronto/neurostack-crowd-intelligence-simulator)
 
 [![X](https://img.shields.io/badge/X-Follow-000000?style=flat-square&logo=x&logoColor=white)](https://x.com/neurostack_ai)
 [![Instagram](https://img.shields.io/badge/Instagram-Follow-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://www.instagram.com/neurostack_ai/)
@@ -37,7 +37,7 @@ From serious predictions to playful simulations, we let every "what if" see its 
 
 ## 🌐 Live Demo
 
-Welcome to visit our online demo environment and experience a prediction simulation on trending public opinion events we've prepared for you: [neurostack-cis-live-demo](https://neurostack.github.io/neurostack-crowd-intelligence-simulator-demo/)
+Welcome to visit our online demo environment and experience a prediction simulation on trending public opinion events we've prepared for you: [neurostack-cis-live-demo](https://kkahol-toronto.github.io/neurostack-crowd-intelligence-simulator/)
 
 ## 📸 Screenshots
 
@@ -189,10 +189,10 @@ The simulation engine is powered by **[OASIS (Open Agent Social Interaction Simu
 
 ## 📈 Project Statistics
 
-<a href="https://www.star-history.com/#neurostack/neurostack-crowd-intelligence-simulator&type=date&legend=top-left">
+<a href="https://www.star-history.com/#kkahol-toronto/neurostack-crowd-intelligence-simulator&type=date&legend=top-left">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=neurostack/neurostack-crowd-intelligence-simulator&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=neurostack/neurostack-crowd-intelligence-simulator&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=neurostack/neurostack-crowd-intelligence-simulator&type=date&legend=top-left" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=kkahol-toronto/neurostack-crowd-intelligence-simulator&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=kkahol-toronto/neurostack-crowd-intelligence-simulator&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=kkahol-toronto/neurostack-crowd-intelligence-simulator&type=date&legend=top-left" />
  </picture>
 </a>

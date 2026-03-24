@@ -4,7 +4,7 @@
     <nav class="navbar">
       <div class="nav-brand">NEUROSTACK_CROWD_INTELLIGENCE_SIMULATOR</div>
       <div class="nav-links">
-        <a href="https://github.com/neurostack/neurostack-crowd-intelligence-simulator" target="_blank" class="github-link">
+        <a href="https://github.com/kkahol-toronto/neurostack-crowd-intelligence-simulator" target="_blank" class="github-link">
           Visit our GitHub <span class="arrow">↗</span>
         </a>
       </div>
